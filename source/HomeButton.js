@@ -1,5 +1,6 @@
 import react from 'react';
 import {MuiThemeProvider, RaisedButton} from 'material-ui';
+// import {black, red} from 'material-ui/styles/colors';
 
 class HomeButton extends React.Component {
 
@@ -47,5 +48,9 @@ class HomeButton extends React.Component {
         </MuiThemeProvider>;
     };
 }
+
+var buttonStyle = {
+    margin: '15px'
+};
 
 export default HomeButton;
