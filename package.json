@@ -1,10 +1,11 @@
 {
-  "name": "isit-web-crafts",
+  "name": "isit-web-crafts-vinicky",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "test": "karma start",
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "bundle": "node_modules/.bin/webpack"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -14,13 +15,19 @@
     "express": "^4.16.1",
     "express-session": "^1.15.6",
     "jade": "~1.11.0",
+    "isit-code-vinicky": "^1.1.1",
+    "isit-site-tools-vinicky": "^1.0.5",
     "marked": "~0.3.6",
     "mongoose": "^4.12.0",
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "serve-favicon": "^2.4.5",
-    "sharp": "^0.18.4"
+    "sharp": "^0.18.4",
+    "webpack": "^3.8.1",
+    "bootstrap": "^3.3.7",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "grunt": "~1.0.1",
@@ -37,6 +44,11 @@
     "karma": "~1.7.1",
     "karma-jasmine": "~1.1.0",
     "karma-phantomjs-launcher": "~1.0.4",
-    "karma-spec-reporter": "0.0.31"
+    "karma-spec-reporter": "0.0.31",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack-dev-server": "^2.9.2"
   }
 }

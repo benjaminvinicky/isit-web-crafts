@@ -6,10 +6,10 @@ var isAuthenticated = function(request, response, next) {
 
     // Passport added the this method to the request object.
     console.log('isAuthenticated called');
-    if (request.isAuthenticated()) {
-        console.log('successfully authenticated');
+    /*if (request.isAuthenticated()) {
+        console.log('successfully authenticated');*/
         return next();
-    }
+    //}
 
     console.log('in isAuthenticated, user not authenticate, send to login');
     response.redirect('/login');

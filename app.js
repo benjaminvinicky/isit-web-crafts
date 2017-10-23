@@ -6,8 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // Connect to DB
-var connect = require('./routes/connect');
-connect.doConnection(false);
+//var connect = require('./routes/connect');
+//connect.doConnection(false);
 
 var makers = require('./routes/makers');
 var users = require('./routes/users');
