@@ -1,5 +1,6 @@
 import react from 'react';
-import {MuiThemeProvider, RaisedButton} from 'material-ui';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
 // import {black, red} from 'material-ui/styles/colors';
 
 class HomeButton extends React.Component {
@@ -26,8 +27,7 @@ class HomeButton extends React.Component {
     }
 
     render() {
-        return
-        <MuiThemeProvider>
+        return <MuiThemeProvider>
             <div>
                 <h1>Home Page</h1>
 
@@ -44,6 +44,8 @@ class HomeButton extends React.Component {
                     primary={true}
                     onClick={this.makeImage}>{this.state.makeImg}
                 </RaisedButton>
+                <p>Select a button.</p>
+                <p>This is a react component.</p>
             </div>
         </MuiThemeProvider>;
     };
