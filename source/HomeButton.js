@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 // import {black, red} from 'material-ui/styles/colors';
