@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactHome from '../ReactHome';
-import HomeButton from '../HomeButton';
 import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import ElfDebugEnzyme from '../ElfDebugEnzyme';
@@ -13,23 +11,14 @@ global.$ = jQuery;
 //import '../fake-pub-sub';
 //import raf from '../temp-poly-fills';
 
-describe('WebCrafts Sanity Test', function() {
+describe('React Home Tests', function() {
 
     'use strict';
 
-    it('expects true to be true', function() {
+    it('expects true to be true', function () {
         expect(true).toBe(true);
     });
 
-    it('renders ReactHome without crashing', () => {
-        const div = document.createElement('div');
-        ReactDOM.render(<ReactHome/>, div);
-    });
-
-    it('renders HomeButton without crashing', () => {
-        const div = document.createElement('div');
-        ReactDOM .render(<HomeButton/>, div);
-    });
     it('renders HomeButton without crashing', () => {
         const wrapper = shallow(<ReactHome/>);
         const h1tag = <h1>An H1 element in a React Component</h1>;

@@ -23312,7 +23312,7 @@ exports.default = ReactHome;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(React) {
+
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -23374,18 +23374,18 @@ var HomeButton = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            return React.createElement(
+            return _react2.default.createElement(
                 _MuiThemeProvider2.default,
                 null,
-                React.createElement(
+                _react2.default.createElement(
                     'div',
                     null,
-                    React.createElement(
+                    _react2.default.createElement(
                         'h1',
                         null,
                         'Home Page'
                     ),
-                    React.createElement(
+                    _react2.default.createElement(
                         _RaisedButton2.default,
                         {
                             id: 'makeHtml',
@@ -23394,7 +23394,7 @@ var HomeButton = function (_React$Component) {
                             onClick: this.makeHtml },
                         this.state.makeHtml
                     ),
-                    React.createElement(
+                    _react2.default.createElement(
                         _RaisedButton2.default,
                         {
                             id: 'makeImg',
@@ -23403,12 +23403,12 @@ var HomeButton = function (_React$Component) {
                             onClick: this.makeImage },
                         this.state.makeImg
                     ),
-                    React.createElement(
+                    _react2.default.createElement(
                         'p',
                         null,
                         'Select a button.'
                     ),
-                    React.createElement(
+                    _react2.default.createElement(
                         'p',
                         null,
                         'This is a react component.'
@@ -23419,14 +23419,13 @@ var HomeButton = function (_React$Component) {
     }]);
 
     return HomeButton;
-}(React.Component);
+}(_react2.default.Component);
 
 var buttonStyle = {
     margin: '15px'
 };
 
 exports.default = HomeButton;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 103 */
