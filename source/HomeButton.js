@@ -29,7 +29,7 @@ class HomeButton extends React.Component {
     render() {
         return <MuiThemeProvider>
             <div>
-                <h1>Home Page</h1>
+                <h1>Web Craft Home Page</h1>
 
                 <RaisedButton
                     id="makeHtml"
