@@ -2,7 +2,7 @@ import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 
-class MakeHtml extends React.Component {
+class MakeHtmlHomeButton extends React.Component {
     constructor() {
         super();
 

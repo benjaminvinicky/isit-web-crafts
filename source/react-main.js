@@ -5,11 +5,18 @@ import MakeHtml from './MakeHtml';
 
 let homeDiv = null
 
-function reactHome() {
-    ReactDOM.render(<ReactHome />, homeDiv)
-}
 function reactMakeHtml(event, customMessage) {
     ReactDOM.render(<MakeHtml/>, homeDiv);
+}
+
+function reactHome() {
+    //$('#pageLoad').empty();
+    document.getElementById('pageLoad').innerHTML = '';
+    home();
+}
+
+function home() {
+    ReactDOM.render(<ReactHome/>, homeDiv);
 }
 
 $(document).ready(function() {

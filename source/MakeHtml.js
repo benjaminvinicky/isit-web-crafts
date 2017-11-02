@@ -4,13 +4,6 @@ import MakeHtmlDropDowns from './MakeHtmlDropDowns';
 import MakeHtmlHomeButton from './MakeHtmlHomeButton';
 
 class MakeHtml extends React.Component {
-    constructor() {
-        super();
-
-        this.state = {
-            home: 'Go Home'
-        }
-    }
 
     render() {
 

@@ -4,12 +4,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: './source/react-main.js',
-    output: {path: __dirname + '/public/javascripts', filename: 'bundle.js'},
-    plugins: [
-        new webpack.ProvidePlugin({
-            "React": "react",
-        }),
-    ],
+    output: {path: __dirname, filename: 'public/javascripts/bundle.js'},
     module: {
         loaders: [
             {

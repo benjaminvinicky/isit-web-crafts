@@ -14,7 +14,6 @@ const items = [];
 
 class MakeHtmlDropDowns extends React.Component {
 
-
     constructor() {
         super();
 
@@ -44,7 +43,7 @@ class MakeHtmlDropDowns extends React.Component {
                 return response.json();
             })
             .then(function (configSummary) {
-                //console.log('parsed json', JSON.stringify(configSummary, null, 4));
+                console.log('parsed json', JSON.stringify(configSummary, null, 4));
                 items.length = 0;
                 configSummary.siteDirs.forEach(function (dir, index) {
                     const showDir = configSummary.baseDir + dir;
