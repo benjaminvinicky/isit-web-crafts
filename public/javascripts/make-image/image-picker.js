@@ -4,7 +4,7 @@
 
 define(['display', 'utilities'], function(display, utilities) {
     'use strict';
-    
+
     function ImagePicker() {
 
     }
@@ -31,10 +31,10 @@ define(['display', 'utilities'], function(display, utilities) {
 
     function createMarkdown() {
         $.getJSON('/makers/makeImages', function(result) {
-            display.showDebug(JSON.stringify(result, null, 4));
-        }).done(function() {
-            display.showDebug('Make Markdown loaded second success');
-        })
+                display.showDebug(JSON.stringify(result, null, 4));
+            }).done(function() {
+                display.showDebug('Make Markdown loaded second success');
+            })
             .fail(function(jqxhr, textStatus, error) {
                 display.showDebug('Make Markdown load error: ' + jqxhr.status + ' ' + textStatus + ' ' + error);
             })

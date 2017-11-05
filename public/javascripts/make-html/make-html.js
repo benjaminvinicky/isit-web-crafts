@@ -41,7 +41,7 @@ define(['display', 'walking'], function(display, walking) {
 
     function publishRectMakeHtml() {
         $.publish('reactMakeHtml', {
-            message : "Publisher Constructor Called"
+            message: "Publisher Constructor Called"
         });
     }
 

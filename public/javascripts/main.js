@@ -15,10 +15,10 @@ requirejs.config({
         reactBundle: 'javascripts/bundle',
         tinyPubSub: 'javascripts/tools/tiny-pub-sub'
     },
-    shim : {
-        "tinyPubSub" : {
-            deps : [ "jquery" ],
-            exports : "tinyPubSub"
+    shim: {
+        "tinyPubSub": {
+            deps: ["jquery"],
+            exports: "tinyPubSub"
         }
     }
 });

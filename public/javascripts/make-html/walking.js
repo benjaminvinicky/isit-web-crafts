@@ -62,18 +62,18 @@ define(['display', 'utilities'], function(display, utilities) {
 
     function makersWalk(requestQuery, requestIndex, callback) {
         $.getJSON('/makers/walk', requestQuery, function(result) {
-                display.showApacheFiles(result.htmlFilesWritten, result.destinationDir);
-                display.fillDisplayArea(JSON.stringify(result, null, 4));
-            }).done(function() {
-                display.showDebug('Walk loaded second success');
-            }).fail(function(jqxhr, textStatus, error) {
-                display.showDebug('Walk loaded error: ' + jqxhr.status + ' ' + textStatus + ' ' + error);
-            }).always(function() {
-                display.showDebug('Walk loaded complete');
-                if (callback) {
-                    callback(requestIndex + 1);
-                }
-            });
+            display.showApacheFiles(result.htmlFilesWritten, result.destinationDir);
+            display.fillDisplayArea(JSON.stringify(result, null, 4));
+        }).done(function() {
+            display.showDebug('Walk loaded second success');
+        }).fail(function(jqxhr, textStatus, error) {
+            display.showDebug('Walk loaded error: ' + jqxhr.status + ' ' + textStatus + ' ' + error);
+        }).always(function() {
+            display.showDebug('Walk loaded complete');
+            if (callback) {
+                callback(requestIndex + 1);
+            }
+        });
 
     }
 

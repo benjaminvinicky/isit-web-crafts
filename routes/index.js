@@ -8,7 +8,7 @@ var isAuthenticated = function(request, response, next) {
     console.log('isAuthenticated called');
     /*if (request.isAuthenticated()) {
         console.log('successfully authenticated');*/
-        return next();
+    return next();
     //}
 
     console.log('in isAuthenticated, user not authenticate, send to login');

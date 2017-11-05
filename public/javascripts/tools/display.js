@@ -4,7 +4,7 @@
 
 define(function() {
     'use strict';
-    
+
     return {
         clear: function() {
             $('#displayArea').empty();

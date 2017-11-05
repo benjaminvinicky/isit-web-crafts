@@ -2,7 +2,7 @@ import React from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import RaisedButton from "material-ui/RaisedButton";
 
-class MakeHtmlHomeButton extends React.Component {
+class MakeImageHomeButton extends React.Component {
     constructor() {
         super();
 
@@ -39,4 +39,4 @@ const buttonStyle = {
     margin: "10px 10px 10px 0"
 };
 
-export default MakeHtmlHomeButton;
+export default MakeImageHomeButton;
