@@ -5,12 +5,14 @@ import MakeHtmlHomeButton from "./MakeHtmlHomeButton";
 
 class MakeHtml extends React.Component {
     render() {
-        return <MuiThemeProvider>
-            <div>
-                <MakeHtmlHomeButton/>
-                <MakeHtmlDropDowns/>
-            </div>
-        </MuiThemeProvider>;
+        return (
+            <MuiThemeProvider>
+                <div>
+                    <MakeHtmlHomeButton />
+                    <MakeHtmlDropDowns />
+                </div>
+            </MuiThemeProvider>
+        );
     }
 }
 

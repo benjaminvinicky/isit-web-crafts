@@ -28,7 +28,7 @@ class MakeImageHomeButton extends React.Component {
                     >
                         {this.state.home}
                     </RaisedButton>
-                    <p>This is the React MakeHtml component.</p>
+                    <p>This is a React MakeImage HomeButton component.</p>
                 </div>
             </MuiThemeProvider>
         );

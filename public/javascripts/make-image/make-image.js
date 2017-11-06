@@ -10,7 +10,7 @@ define(['imagePicker'], function(imagePicker) {
             message: "Publisher Constructor Called"
         });
     }
-    
+
     return {
         init: function() {
             $('#pageLoad').load('/makers/pixPicker', function() {

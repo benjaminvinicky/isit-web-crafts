@@ -3,7 +3,6 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import RaisedButton from "material-ui/RaisedButton";
 import "whatwg-fetch";
 
-
 class MakeImageButtons extends React.Component {
     constructor() {
         super();
@@ -15,11 +14,10 @@ class MakeImageButtons extends React.Component {
         };
         this.deleteMarkdown = this.deleteMarkdown.bind(this);
         this.createMarkdown = this.createMarkdown.bind(this);
-
     }
 
     deleteMarkdown() {
-        const query = '/makers/deleteMarkdown';
+        const query = "/makers/deleteMarkdown";
         const that = this;
         fetch(query)
             .then(function(response) {

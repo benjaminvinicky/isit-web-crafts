@@ -3,10 +3,10 @@ import "../../public/javascripts/tools/tiny-pub-sub";
 import ReactDOM from "react-dom";
 import ReactHome from "../ReactHome";
 import HomeButton from "../HomeButton";
-import { configure, shallow } from "enzyme";
+import { configure, shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import ElfDebugEnzyme from "../ElfDebugEnzyme";
-const elfDebugEnzyme = new ElfDebugEnzyme(true, "sanity");
+const elfDebugEnzyme = new ElfDebugEnzyme(true, "home-button");
 configure({ adapter: new Adapter() });
 import jQuery from "jquery";
 global.jQuery = jQuery;
@@ -37,12 +37,15 @@ describe("Webcrafts HomeButton Tests", function() {
 
     it("publishes clientMakeImg event after button click", () => {
         const wrapper = shallow(<HomeButton />);
-        $.subscribe("clientMakeImg", (event, target) => {
+        let subscriptionCalled = false;
+        $.subscribe("clientMakeImage", (event, target) => {
             console.log(JSON.stringify(event, null, 4));
             console.log(target);
-            expect(event.type).toBe("clientMakeImg");
-            expect(target.message).toBe("The user wants to makeImg.");
+            expect(event.type).toBe("clientMakeImage");
+            expect(target.message).toBe("The user wants to makeImage.");
+            subscriptionCalled = true;
         });
-        wrapper.find("#makeImg").simulate("click");
+        wrapper.find("#makeImage").simulate("click");
+        expect(subscriptionCalled).toBeTruthy();
     });
 });

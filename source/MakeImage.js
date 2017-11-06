@@ -5,12 +5,14 @@ import MakeImageButtons from "./MakeImageButtons";
 
 class MakeImage extends React.Component {
     render() {
-        return <MuiThemeProvider>
-            <div>
-                <MakeImageHomeButton />
-                <MakeImageButtons />
-            </div>
-        </MuiThemeProvider>;
+        return (
+            <MuiThemeProvider>
+                <div>
+                    <MakeImageHomeButton />
+                    <MakeImageButtons />
+                </div>
+            </MuiThemeProvider>
+        );
     }
 }
 
