@@ -1,8 +1,9 @@
 import React from "react";
 import MakeHtml from "../MakeHtml";
-import { configure, mount } from "enzyme";
+import { configure, mount, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import ElfDebugEnzyme from "../ElfDebugEnzyme";
+import MakeHtmlHomeButton from '../MakeHtmlHomeButton';
 
 const elfDebugEnzyme = new ElfDebugEnzyme(true, "sanity");
 
@@ -25,5 +26,12 @@ describe("MakeHtml Basic Tests Suite", function() {
         const definition = <p>This is the React MakeHtml component.</p>;
         elfDebugEnzyme.getLast(wrapper, "p", true);
         expect(wrapper.contains(definition)).toEqual(true);
+    });
+
+    it('proves that MakeHtmlHomeButton is part of the MakeHtml page', () => {
+        const wrapper = shallow(<MakeHtml />);
+        const h1tag = <MakeHtmlHomeButton />;
+        elfDebugEnzyme.getAll(wrapper, true);
+        expect(wrapper.contains(h1tag)).toEqual(true);
     });
 });

@@ -19,4 +19,11 @@ describe("MakeHtml Dropdown test Suite", function() {
     it("expects true to be true", function() {
         expect(true).toBe(true);
     });
+
+    it('renders default value of H1 tag', () => {
+        const wrapper = shallow(<MakeHtmlDropDowns />);
+        const h1tag = <h1>Render Markdown as HTML</h1>;
+        elfDebugEnzyme.getLast(wrapper, 'h1', true);
+        expect(wrapper.contains(h1tag)).toEqual(true);
+    });
 });

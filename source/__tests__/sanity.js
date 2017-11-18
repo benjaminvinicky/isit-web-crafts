@@ -1,38 +1,46 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import ReactHome from "../ReactHome";
-import HomeButton from "../HomeButton";
-import { configure, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-import ElfDebugEnzyme from "../ElfDebugEnzyme";
-const elfDebugEnzyme = new ElfDebugEnzyme(true, "sanity");
-configure({ adapter: new Adapter() });
-import jQuery from "jquery";
-global.jQuery = jQuery;
-global.$ = jQuery;
-//import '../fake-pub-sub';
-//import raf from '../temp-poly-fills';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactHome from '../ReactHome';
+import HomeButton from '../HomeButton';
+import MakeHtml from '../MakeHtml';
+import MakeHtmlDropDowns from '../MakeHtmlDropDowns';
+import MakeHtmlHomeButton from '../MakeHtmlHomeButton';
+import MakeImage from '../MakeImage';
 
-describe("WebCrafts Sanity Test", function() {
-    "use strict";
+describe('WebCrafts Sanity Test', function() {
+    'use strict';
 
-    it("expects true to be true", function() {
+    it('expects true to be true', function() {
         expect(true).toBe(true);
     });
 
-    it("renders ReactHome without crashing", () => {
-        const div = document.createElement("div");
+    it('renders ReactHome without crashing', () => {
+        const div = document.createElement('div');
         ReactDOM.render(<ReactHome />, div);
     });
 
-    it("renders HomeButton without crashing", () => {
-        const div = document.createElement("div");
+    it('renders HomeButtons without crashing', () => {
+        const div = document.createElement('div');
         ReactDOM.render(<HomeButton />, div);
     });
-    it("renders HomeButton without crashing", () => {
-        const wrapper = shallow(<ReactHome />);
-        const h1tag = <h1>An H1 element in a React Component</h1>;
-        elfDebugEnzyme.getLast(wrapper, "h1", true);
-        expect(wrapper.contains(h1tag)).toEqual(true);
+
+    it('tests if we can load MakeHtml', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MakeHtml />, div);
+    });
+
+    it('tests if we can load MakeHtml DropDowns', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MakeHtmlDropDowns />, div);
+    });
+
+    it('tests if we can load MakeHtml DropDowns', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MakeHtmlHomeButton />, div);
+    });
+
+    it('tests if we can load MakeHtml', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<MakeImage />, div);
     });
 });

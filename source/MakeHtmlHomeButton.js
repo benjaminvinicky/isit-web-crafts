@@ -29,6 +29,7 @@ class MakeHtmlHomeButton extends React.Component {
                         {this.state.home}
                     </RaisedButton>
                     <p>This is the React MakeHtml component.</p>
+                    <p>Select button to return to the home page.</p>
                 </div>
             </MuiThemeProvider>
         );

@@ -26,4 +26,12 @@ describe("MakeHtml Basic Tests Suite", function() {
         elfDebugEnzyme.getLast(wrapper, "p", true);
         expect(wrapper.contains(definition)).toEqual(true);
     });
+
+    it('renders p tag with home button instructions', () => {
+        const wrapper = shallow(<MakeHtmlHomeButton />);
+        const h1tag = <p>Select button to return to the home page.</p>;
+        elfDebugEnzyme.getLast(wrapper, 'p', true);
+        expect(wrapper.contains(h1tag)).toEqual(true);
+    });
+
 });
