@@ -1,23 +1,51 @@
 {
-    "calvert": {
-        "base-dir": "/home/bcuser/",
-        "bootswatch": "cosmo",
-        "most-recent-date": "2017-08-14",
-        "site-dirs": [
-            "Documents/AllSite",
-            "Git/CloudNotes/Isit320"
-        ],
-        "destination-dirs": [
-            "/var/www/html/AllSite/",
-            "/home/bcuser/Git/charliecalvert.github.io/books/CloudNotes/Isit320/"
-        ],
-        "destination-dirs-extra": [{
-            "base": "/var/www/html/",
-            "extra": ""
-        }, {
-            "base": "/var/www/html/Assignments/",
-            "extra": "Assignments"
-        }]
+    "users": {
+        "calvert": {
+            "base-dir": "/home/bcuser/",
+            "bootswatch": "cosmo",
+            "most-recent-date": "2017-08-14",
+            "site-dirs": [
+                "Documents/AllSite",
+                "Git/CloudNotes/Isit320"
+            ],
+            "destination-dirs": [
+                "/var/www/html/AllSite/",
+                "/home/bcuser/Git/charliecalvert.github.io/books/CloudNotes/Isit320/"
+            ],
+            "destination-dirs-extra": [
+                {
+                    "base": "/var/www/html/",
+                    "extra": ""
+                },
+                {
+                    "base": "/var/www/html/Assignments/",
+                    "extra": "Assignments"
+                }
+            ]
+        },
+        "bcuser": {
+            "base-dir": "/home/bcuser/",
+            "bootswatch": "inYoFace!",
+            "most-recent-date": "2017-02-04",
+            "site-dirs": [
+                "Documents/AllSite",
+                "Git/CloudNotes/Isit320"
+            ],
+            "destination-dirs": [
+                "/var/www/html/AllSite/",
+                "/home/bcuser/Git/benjaminvinicky.somethingUpinHe-ah/"
+            ],
+            "destination-dirs-extra": [
+                {
+                    "base": "/var/www/html/",
+                    "extra": ""
+                },
+                {
+                    "base": "/var/www/html/Assignments/",
+                    "extra": "Assignments"
+                }
+            ]
+        }
     },
     "selectedElvenImages": [
         "california1",
@@ -45,6 +73,18 @@
         {
             "name": "california2",
             "baseDir": "/var/www/html/images",
+            "cloudPath": "/images",
+            "createSmallImages": true
+        },
+        {
+            "name": "california3",
+            "baseDir": "/var/www/html/images",
+            "cloudPath": "/images",
+            "createSmallImages": true
+        },
+        {
+            "name": "testImages",
+            "baseDir": "/home/bcuser/temp",
             "cloudPath": "/images",
             "createSmallImages": true
         }
