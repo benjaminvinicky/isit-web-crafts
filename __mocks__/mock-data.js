@@ -18,7 +18,7 @@ const getData = (url) => {
                 ],
                 'destinationDirs': [
                     '/var/www/html/AllSite/',
-                    '/home/charlie/Git/charliecalvert.github.io/books/CloudNotes/Isit320/'
+                    '/home/charlie/Git/CloudNotes/Isit320/'
                 ],
                 'destination-dirs-extra': [{
                     'base': '/var/www/html/',
@@ -29,6 +29,21 @@ const getData = (url) => {
                 }]
             };
             return configSummary;
+
+        case '/makers/walk?siteDirsIndex=1':
+            const walkResult = {
+                result: 'success',
+                baseDir: undefined,
+                mostRecentDate: undefined,
+                destinationDir: '/home/charlie/Git/CloudNotes/tips/',
+                directories: ['/home/charlie/Git/CloudNotes/Tips'],
+                masterListOfNames: ['* [Summary.html](Summary.html)'],
+                htmlFilesWritten:
+                    ['/home/charlie/Git/CloudNotes/tips/Summary.html',
+                        '/home/charlie/Git/CloudNotes/tips/master-list.html']
+            };
+
+            return walkResult;
 
         default:
             return {};

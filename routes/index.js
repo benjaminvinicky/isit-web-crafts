@@ -55,5 +55,6 @@ module.exports = function(passport) {
         failureRedirect: '/signup'
     }));
 
+
     return router;
 };

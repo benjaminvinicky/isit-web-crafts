@@ -11,6 +11,8 @@ html
             link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500")
             link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
         block script
-            script(data-main="javascripts/main.js" src="/bower_components/requirejs/require.js")
+            script(defer='', src='https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js')
+            script(defer='', src='https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js')
+            script(defer='', src='https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js')
     body
         block content

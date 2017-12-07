@@ -94,13 +94,15 @@ class MakeHtmlDropDowns extends React.Component {
     }
 
     generateHtml() {
-        console.log(this.state.value);
-        console.log(siteDirs[this.state.value]);
+        // console.log(this.state.value);
+        // console.log(siteDirs[this.state.value]);
         //walking.runWalkReact('qSingle', this.state.siteDir, this.state.destDir);
-        const query = "/makers/walk?siteDirsIndex=" + this.state.value;
+        const query = "/makers/walk?index=" + this.state.value;
+        // console.log(query);
         var that = this;
         fetch(query)
             .then(function(response) {
+                console.log("IM TRYING!");
                 return response.json();
             })
             .then(function(configSummary) {
@@ -144,14 +146,15 @@ class MakeHtmlDropDowns extends React.Component {
                     }
 
                     <RaisedButton
+                        id="generate"
                         style={buttonStyle}
                         primary={true}
                         onClick={this.generateHtml}
                     >
-                        Generate HTML
+                        {this.state.walk}
                     </RaisedButton>
-                    <pre>
-                        <p>ConfigSummary: {this.state.configSummary}</p>
+                    <pre id="configSummary">
+                        {this.state.configSummary}
                     </pre>
                 </div>
             </MuiThemeProvider>

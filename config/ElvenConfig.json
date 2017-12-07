@@ -1,7 +1,7 @@
 {
     "users": {
         "calvert": {
-            "base-dir": "/home/bcuser/",
+            "base-dir": "/home/ubuntu/",
             "bootswatch": "cosmo",
             "most-recent-date": "2017-08-14",
             "site-dirs": [
@@ -10,7 +10,7 @@
             ],
             "destination-dirs": [
                 "/var/www/html/AllSite/",
-                "/home/bcuser/Git/charliecalvert.github.io/books/CloudNotes/Isit320/"
+                "/home/ubuntu/Git/charliecalvert.github.io/books/CloudNotes/Isit320/"
             ],
             "destination-dirs-extra": [
                 {
@@ -23,8 +23,8 @@
                 }
             ]
         },
-        "bcuser": {
-            "base-dir": "/home/bcuser/",
+        "vinicky": {
+            "base-dir": "/home/ubuntu/",
             "bootswatch": "inYoFace!",
             "most-recent-date": "2017-02-04",
             "site-dirs": [
@@ -33,7 +33,7 @@
             ],
             "destination-dirs": [
                 "/var/www/html/AllSite/",
-                "/home/bcuser/Git/benjaminvinicky.somethingUpinHe-ah/"
+                "/home/ubuntu/Git/benjaminvinicky.somethingUpinHe-ah/"
             ],
             "destination-dirs-extra": [
                 {
@@ -84,7 +84,7 @@
         },
         {
             "name": "testImages",
-            "baseDir": "/home/bcuser/temp",
+            "baseDir": "/home/ubuntu/temp",
             "cloudPath": "/images",
             "createSmallImages": true
         }

@@ -1,18 +1,15 @@
-/**
- * Created by charlie on 7/11/16.
- */
-
 var express = require('express');
 var router = express.Router();
 var walker = require('isit-site-tools-vinicky').walker;
 var walkRunner = require('isit-site-tools-vinicky').walkRunner;
 var imagesTest = require('isit-site-tools-vinicky').imagesTest;
-var config = require('isit-code-vinicky').elfConfig;
 var fs = require('fs');
 var utils = require('isit-code-vinicky').elfUtils;
 var imageHelp = require('isit-site-tools-vinicky').imageHelp;
 var elfLog = require('isit-code-vinicky').elvenLog('makers');
 elfLog.setLevel(elfLog.logLevelDetails);
+
+const config = require('isit-code-vinicky').elfConfig;
 
 router.get('/makeHtml', function(request, response) {
     'use strict';
@@ -30,6 +27,18 @@ router.get('/pixPicker', function(request, response) {
     });
 });
 
+router.get('/get-config', function(req, res) {
+    'use strict';
+    //var user = 'calvert';
+    config.loadAsync()
+        .then(function(configuration) {
+            res.status(200).send(configuration);
+        })
+        .catch(function(err) {
+            throw err;
+        });
+});
+
 router.get('/config', function(request, response) {
     'use strict';
     config.useLocalConfig = false;
@@ -37,10 +46,9 @@ router.get('/config', function(request, response) {
     config.loadAsync()
         .then(function(configData) {
             elfLog.nano('CONFIG DATA: ', JSON.stringify(configData, null, 4));
-
             var baseDir = config.get('users', user, 'base-dir');
             var siteDirs = config.get('users', user, 'site-dirs');
-            var mostRecentDate = config.get('users', user, 'most-recent-date' );
+            var mostRecentDate = config.get('users', user, 'most-recent-date');
             var destinationDirs = config.get('users', user, 'destination-dirs');
             var configSummary = {
                 'baseDir': baseDir,
@@ -48,39 +56,12 @@ router.get('/config', function(request, response) {
                 'siteDirs': siteDirs,
                 'destinationDirs': destinationDirs
             };
-            console.log('Config is:', configSummary);
             response.status(200).send(configSummary);
         })
         .catch(function(err) {
             throw err;
         });
 });
-
-/*router.get('/config', function(request, response) {
-    'use strict';
-    config.useLocalConfig = false;
-    var user = 'calvert';
-    config.loadAsync()
-        .then(function(configData) {
-            elfLog.nano('CONFIG DATA: ', JSON.stringify(configData, null, 4));
-
-            var baseDir = config.get(user, 'base-dir');
-            var siteDirs = config.get(user, 'site-dirs');
-            var mostRecentDate = config.get(user, 'most-recent-date');
-            var destinationDirs = config.get(user, 'destination-dirs');
-            var configSummary = {
-                'baseDir': baseDir,
-                'mostRecentDate': mostRecentDate,
-                'siteDirs': siteDirs,
-                'destinationDirs': destinationDirs
-            };
-            console.log('Config is:', configSummary);
-            response.status(200).send(configSummary);
-        })
-        .catch(function(err) {
-            throw err;
-        });
-});*/
 
 router.get('/makeImages', function(request, response) {
     imagesTest.run()
@@ -139,12 +120,18 @@ router.get('/deleteMarkdown', function(request, response) {
     });
 });
 
-router.get('/walk', function(request, response) {
-    console.log(request.query);
-    //const runConfig = require('./markdown-to-html/runners/sample-runner');
-    walkRunner('calvert', request.query.siteDirsIndex, false)
+router.get('/walkFaster', function(req, res) { 'use strict';
+    var myresponse = { "result" : "route03" + req.query};
+    return res.status(200).send(myresponse);
+});
+
+router.get('/walk', function(req, res) {
+    'use strict';
+    console.log("We made it to the route: " + req.query);
+    walkRunner('calvert', req.query.index, false)
         .then(function(report) {
-            response.send(report);
+            console.log("WE MADE IT!");
+            res.send(report);
         })
         .catch(function(err) {
             throw err;
