@@ -129,8 +129,8 @@ router.get('/walk', function(req, res, next) {
     'use strict';
     const user = 'calvert';
     walkRunner( user, req.query.index, false)
-        .then(function(configSummary) {
-            res.status(200).send(configSummary);
+        .then(function(report) {
+            res.status(200).send(report);
         })
         .catch(function(err) {
             throw err;

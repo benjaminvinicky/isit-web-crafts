@@ -108,7 +108,7 @@ class MakeHtmlDropDowns extends React.Component {
             .then(function(configSummary) {
                 console.log(JSON.stringify(configSummary, null, 4));
                 that.setState({
-                    configSummary: configSummary.htmlFilesWritten
+                    configSummary: JSON.stringify(configSummary.htmlFilesWritten, null, 4)
                 });
             })
             .catch(function(ex) {

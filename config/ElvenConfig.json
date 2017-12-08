@@ -1,7 +1,7 @@
 {
     "users": {
         "calvert": {
-            "base-dir": "/home/ubuntu/",
+            "base-dir": "/home/bcuser/",
             "bootswatch": "cosmo",
             "most-recent-date": "2017-08-14",
             "site-dirs": [
