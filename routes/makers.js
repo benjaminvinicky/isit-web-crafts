@@ -125,13 +125,12 @@ router.get('/walkFaster', function(req, res) { 'use strict';
     return res.status(200).send(myresponse);
 });
 
-router.get('/walk', function(req, res) {
+router.get('/walk', function(req, res, next) {
     'use strict';
-    console.log("We made it to the route: " + req.query);
-    walkRunner('calvert', req.query.index, false)
-        .then(function(report) {
-            console.log("WE MADE IT!");
-            res.send(report);
+    const user = 'calvert';
+    walkRunner( user, req.query.index, false)
+        .then(function(configSummary) {
+            res.status(200).send(configSummary);
         })
         .catch(function(err) {
             throw err;

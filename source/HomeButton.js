@@ -57,26 +57,26 @@ class HomeButton extends React.Component {
     }
 
     handleToggle() {
-        if (this.state.open === true) {
-            this.setState({open: false});
-        }
-        else this.setState({open: true});
+        this.setState({open: !this.state.open})
     };
 
     handleShowLogin() {
-        console.log("hello");
+        this.setState({open: false});
         this.props.dispatch({type: 'SWITCH_COMPONENT', component: 'app'})
     };
 
     handleShowUsers() {
+        this.setState({open: false});
         this.props.dispatch({type: 'SWITCH_COMPONENT', component: 'show_users'})
     };
 
     handleMakeHtml() {
+        this.setState({open: false});
         this.props.dispatch({type: 'SWITCH_COMPONENT', component: 'make_html'})
     };
 
     handleMakeImg() {
+        this.setState({open: false});
         this.props.dispatch({type: 'SWITCH_COMPONENT', component: 'make_img'})
     };
 
